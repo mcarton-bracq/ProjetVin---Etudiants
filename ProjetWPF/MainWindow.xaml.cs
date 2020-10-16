@@ -132,13 +132,10 @@ namespace ProjetWPF
         {
             if(lvBouteilles.SelectedItem != null)
             {
-                foreach(Bouteille b in gst.LesCaves.Keys)
-                {
-                    txtMillesime.Text = b.LeVin.MillesimeVin.ToString();
-                    txtNomCepage.Text = b.LeVin.LeCepage.NomCepage;
-                    txtPrix.Text = b.LeVin.PrixDuVin.ToString();
-                    txtCouleur.Text = b.LeVin.LaCouleur.NomCouleur;
-                }
+                txtMillesime.Text = (lvBouteilles.SelectedItem as Bouteille).LeVin.MillesimeVin.ToString();
+                txtNomCepage.Text = (lvBouteilles.SelectedItem as Bouteille).LeVin.LeCepage.NomCepage;
+                txtPrix.Text = (lvBouteilles.SelectedItem as Bouteille).LeVin.PrixDuVin.ToString();
+                txtCouleur.Text = (lvBouteilles.SelectedItem as Bouteille).LeVin.LaCouleur.NomCouleur;                
             }
         }
     }
